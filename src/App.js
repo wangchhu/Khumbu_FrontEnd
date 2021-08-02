@@ -5,6 +5,7 @@ import{BrowserRouter} from 'react-router-dom';
 import SearchBar from './components/SearchBar';
 import Trending from './components/Trending';
 import Featured from './components/Featured';
+import Destination from './components/Destination';
 
 function App() {
   return (
@@ -13,6 +14,7 @@ function App() {
      <SearchBar></SearchBar>
      <Trending></Trending>
      <Featured></Featured>
+     <Destination></Destination>
     </BrowserRouter>
   );
 } 
