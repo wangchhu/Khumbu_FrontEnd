@@ -5,7 +5,6 @@ function SearchBar() {
     return (
         <div>
                 <div class="c1">
-                
                 <div class="para1">
                     <div class="a1">
                     <p>Find Deals on Hotel now</p>

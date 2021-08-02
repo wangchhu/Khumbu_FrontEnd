@@ -1,0 +1,41 @@
+/* trending rooms */
+.a3{
+    margin-top: 100px;
+    font-family: Open Sans,sans-serif;
+    font-weight: 700;
+    font-size: medium;
+    color: #1e2024;
+    margin-left: 50px;
+
+}
+#a3-1 p{
+    color: #df293a;
+}
+.rooms{
+    display: flex;
+    padding: 20px;
+}
+#r1{
+    /* padding: 10px; */
+     margin-left: 50px; 
+}
+#r1 h6{
+    font-size: medium;
+    font-weight: bold;
+    font-family:  'Open Sans', sans-serif;
+    margin-top: 10px;
+}
+#a{
+    font-size:small;
+    font-weight: 400;
+}
+#r1 h5{
+    color: #f5182f;
+    font-weight: 650;
+    font-family:'Open Sans', sans-serif ;
+}
+#xtra{
+    margin-top: -16px;
+    font-size: x-small;
+    color: cadetblue;
+}
