@@ -12,7 +12,7 @@ function Trending() {
                     <div id="r1">
                     <a  href="/booking"><img src="/h1.jpg" alt="" height="200px" width="400px"/></a>
                     </div>
-                    <div id="r2">
+                    <div id="r1-2">
                         <h6>Hotel Everest</h6>
                         <p id="a">Boudha, Kathmandu<br/></p><h5>NPR 1500</h5><p id="xtra">per room per night</p>
                     </div>
