@@ -8,8 +8,10 @@
     margin-left: 50px;
 
 }
-#a3-1 p{
+#a3-1{
     color: #df293a;
+    margin-top: -22px;
+    margin-left: 88px;
 }
 .rooms{
     display: flex;
@@ -19,23 +21,31 @@
     /* padding: 10px; */
      margin-left: 50px; 
 }
-#r1 h6{
-    font-size: medium;
+#r2{
+    margin-left:-21.3%;
+    margin-top: 196px;
+}
+#r2 h6{
+    font-size:large;
     font-weight: bold;
     font-family:  'Open Sans', sans-serif;
     margin-top: 10px;
 }
 #a{
     font-size:small;
-    font-weight: 400;
+    font-weight: 380;
+    margin-top: -40px;
 }
-#r1 h5{
+#r2 h5{
     color: #f5182f;
-    font-weight: 650;
+    font-weight: bolder;
+    font-size: 20px;
     font-family:'Open Sans', sans-serif ;
+    margin-top: -15px;
 }
 #xtra{
     margin-top: -16px;
     font-size: x-small;
     color: cadetblue;
+    margin-top: -40px;
 }
