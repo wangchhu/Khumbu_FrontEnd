@@ -17,13 +17,16 @@ class Navbar extends Component{
                                <nav class="mainmenu">
                             <ul>
                                 <li class="activa">
-                                    <a href="/Home">Home</a>
+                                    <a href="#Home">Home</a>
                                 </li>
                                 <li>
-                                    <a href="/Cities">Cities</a>
+                                    <a href="#Destination">Cities</a>
                                 </li>
                                 <li>
-                                    <a href="/Hotels">Hotels</a>
+                                    <a href="#Trending">Hotels</a>
+                                </li>
+                                <li>
+                                    <a href="#Contact">Contact Us</a>
                                 </li>
                             </ul>
                             </nav>

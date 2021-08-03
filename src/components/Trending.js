@@ -4,7 +4,7 @@ import './Trending.css';
 function Trending() {
     return (
         <div>
-            <div class="hotels">
+            <div class="hotels" id="Trending">
                     <div class="a3">
                         <p>Trending<p id="a3-1">Now</p></p>
                     </div>

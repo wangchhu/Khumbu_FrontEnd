@@ -4,7 +4,7 @@ import './Destination.css';
 function Destination() {
     return (
         <div>
-            <div class="container">
+            <div class="container" id="Destination">
                     <div class="d2">
                         <h3>These top destinations are just a click away</h3>
                     </div>
