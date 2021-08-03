@@ -14,7 +14,7 @@ function Destination() {
                         <div id="cities-1">
                             <img src="/los.jpg" alt="" height="250px" width="250px"/>
                             <h6>Los Angeles</h6>
-                            <p>5,990 Hotels <p id="av">Avg. $120</p></p>
+                            <p>500 Hotels <p id="av">Avg. $120</p></p>
                         </div>
                         {/* <div id="cities-1">
                             <img src="Public/los.jpg" alt="" height="250px" width="250px">

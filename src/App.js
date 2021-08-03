@@ -6,6 +6,8 @@ import SearchBar from './components/SearchBar';
 import Trending from './components/Trending';
 import Featured from './components/Featured';
 import Destination from './components/Destination';
+import Footer from './components/Footer';
+import Booking from './component2/Booking';
 
 function App() {
   return (
@@ -15,6 +17,8 @@ function App() {
      <Trending></Trending>
      <Featured></Featured>
      <Destination></Destination>
+     <Footer></Footer>
+     <Booking></Booking>
     </BrowserRouter>
   );
 } 

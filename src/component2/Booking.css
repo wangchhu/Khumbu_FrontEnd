@@ -1,0 +1,50 @@
+/* =========Booking========= */
+.personal{
+    padding: 40px;
+    background: cadetblue;  
+    margin-top: 30px;  
+}
+fieldset{
+    margin: 80px 30px;
+    width: 60%;
+    margin-left: 20%;
+    padding: 20px;
+    font-family:'Open Sans', sans-serif ;
+    font-weight: 500;
+}
+legend{
+    font-family:'Open Sans', sans-serif ;
+    font-weight: 600;
+}
+.personal label{
+    font-size: medium;
+    font-family: 'Open Sans', sans-serif;
+    color: aliceblue;
+    margin-left: 30px;
+}
+.personal ::placeholder{
+    font-size: small;
+    font-weight: 100;
+}
+.personal input{
+    font-size:medium ;
+    border: #df293a;
+}
+.Booking{
+    padding: 40px;
+    background: cadetblue;  
+    margin-top: 30px;  
+}
+#BtnSubmit{
+    margin-top: 20px;
+    height: 45px;
+    width: 100px;
+    margin-left: 40%;
+    border: none;
+    background: #f5182f;
+    font-size: medium;
+    color: white;
+}
+#BtnSubmit:hover{
+    background-color: #962b36;
+}
