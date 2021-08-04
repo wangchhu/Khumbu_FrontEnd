@@ -23,7 +23,7 @@ class Navbar extends Component{
                                     <a href="#Destination">Cities</a>
                                 </li>
                                 <li>
-                                    <a href="#Trending">Hotels</a>
+                                    <a href="/check">Hotels</a>
                                 </li>
                                 <li>
                                     <a href="#Contact">Contact Us</a>

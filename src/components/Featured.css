@@ -44,3 +44,21 @@
     font-family:'Open Sans', sans-serif ;
     margin-top: -15px;
 }
+
+/* @media only screen and (min-width: 600px) {
+    #r2-1 h6 {
+      width: auto;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    #cities-1 img,#cities-1 h6,.cities #av  {
+      display: flex;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    #cities-1 img {
+      margin-bottom: 2rem;
+    }
+  } */

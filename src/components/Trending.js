@@ -1,4 +1,5 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 import './Trending.css';
 
 function Trending() {
@@ -10,7 +11,7 @@ function Trending() {
                     </div>
                 <div class="rooms">
                     <div id="r1">
-                    <a  href="/booking"><img src="/h1.jpg" alt="" height="200px" width="400px"/></a>
+                    <Link href="/check"><img src="/h1.jpg" alt="" height="200px" width="400px"/></Link>
                     </div>
                     <div id="r1-2">
                         <h6>Hotel Everest</h6>

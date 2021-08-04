@@ -23,15 +23,24 @@
     margin-top: -15px;
 }
 #cities-1 img{
+    position: relative;
     margin-top: 25px;
     border-radius: 8%;
+    box-shadow: 0 6px 20px rgb(56 125 255 / 20%);
+    filter: drop-shadow(0 6px 20px rgba(33, 108, 248, 0.171));
+}
+#cities-1 img:hover{
+    transform: scale(1.1);
 }
 #cities-1 h6{
     color: black;
     font-size:medium;
     font-weight: bold;
     margin-top: -4px;
+    /* color: #fff;
+    background-color:#1f98f4; */
 }
+
 #cities-1 p{
     font-weight: 300;
     font-size: smaller;
@@ -44,3 +53,21 @@
     margin-top: -20px;
     margin-left: 84px;
 }
+
+/* @media only screen and (min-width: 1200px) {
+    #cities-1 img,#cities-1 h6,.cities #av  {
+      width: 84%;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    #cities-1 img,#cities-1 h6,.cities #av  {
+      display: flex;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    #cities-1 img {
+      margin-bottom: 2rem;
+    }
+  } */
