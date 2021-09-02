@@ -1,6 +1,19 @@
 import { Component } from "react";
+import axios from 'axios';
 
 class Travel extends Component{
+
+   state={
+       travel:[],
+       config:{
+           headers:{'authorization':`Bearer ${localStorage.getItem('token')}`}
+       }
+   }
+   componentDidMount(){
+       axios.get()
+       
+   }
+
     render(){
         return(
         <div>
@@ -58,38 +71,29 @@ class Travel extends Component{
             </div>
             
         </div>
-        {/* Trending */}
+
+        {
+            this.state.travel.map((MyTrending)=>{
+                {/* Trending */}
         <div>
-            <div class="hotels" id="Trending">
-                    <div class="a3">
-                        <p>Trending<p id="a3-1">Now</p></p>
-                    </div>
-                <div class="rooms">
-                    <div id="r1">
-                    <a href="/Book"><img src="/h1.jpg" alt="" height="200px" width="400px"/></a>
-                    </div>
-                    <div id="r1-2">
-                        <h6>Hotel Everest</h6>
-                        <p id="a">Boudha, Kathmandu<br/></p><h5>NPR 1500</h5><p id="xtra">per room per night</p>
-                    </div>
-                    {/* <div id="r1">
-                        <img src="Public/h1.jpg" alt="" height="200px" width="400px">
-                        <h6>Hotel Everest 2</h6>
-                        <a id="a">Boudha, Kathmandu <br></a><h5>NPR 1500</h2><p id="xtra">per room per night</p>
-                    </div>
-                    <div id="r1">
-                        <img src="Public/h1.jpg" alt="" height="200px" width="400px">
-                        <h6>Hotel Everest 3</h6>
-                        <a id="a">Boudha, Kathmandu <br></a><h5>NPR 1500</h2><p id="xtra">per room per night</p>
-                    </div>
-                    <div id="r1">
-                        <img src="Public/h1.jpg" alt="" height="200px" width="400px"/>
-                        <h6>Hotel Everest 4</h6>
-                        <p id="a">Boudha, Kathmandu <br></p> <h5>NPR 1500</h2><p id="xtra">per room per night</p>
-                    </div> */}
+        <div class="hotels" id="Trending">
+                <div class="a3">
+                    <p>Trending<p id="a3-1">Now</p></p>
                 </div>
+            <div class="rooms">
+                <div id="r1">
+                <a href="/Book"><img src="/h1.jpg" alt="" height="200px" width="400px"/></a>
+                </div>
+                <div id="r1-2">
+                    <h6>{MyTrending.Hotel_name}</h6>
+                    <p id="a">Boudha, Kathmandu<br/></p><h5>NPR 1500</h5><p id="xtra">per room per night</p>
+                </div>
+               
             </div>
         </div>
+    </div>
+            })
+        }   
         {/* Featured */}
         <div>
             <div class="hotels-2">
@@ -104,21 +108,7 @@ class Travel extends Component{
                             <h6>Hotel Everest</h6>
                             <p id="a">Boudha, Kathmandu<br/></p><h5>NPR 2200</h5><p id="xtra">per room per night</p>
                         </div>
-                    {/* <div id="r2">
-                        <img src="Public/h1.jpg" alt="" height="200px" width="400px">
-                        <h6>Hotel Everest 2</h6>
-                        <a id="a">Boudha, Kathmandu<br></a><h5>NPR 2200</h2><p id="xtra">per room per night</p>
-                    </div>
-                    <div id="r2">
-                        <img src="Public/h1.jpg" alt="" height="200px" width="400px">
-                        <h6>Hotel Everest 3</h6>
-                        <a id="a">Boudha, Kathmandu<br></a><h5>NPR 2200</h2><p id="xtra">per room per night</p>
-                    </div>
-                    <div id="r2">
-                        <img src="Public/h1.jpg" alt="" height="200px" width="400px">
-                        <h6>Hotel Everest 4</h6>
-                        <p id="a">Boudha, Kathmandu<br></a><h5>NPR 2200</h2><p id="xtra">per room per night</p>
-                    </div> */}
+                    
                 </div>
             </div>
         </div>
