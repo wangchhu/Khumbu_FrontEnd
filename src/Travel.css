@@ -1,0 +1,382 @@
+/* Nav bar */
+.menu{
+    position: relative;
+    z-index: 9;
+}
+.container{
+    width: 70%;
+    /* padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto; */
+    margin: auto;
+}
+.row{
+    /* display: flex; */
+    flex-wrap: wrap;
+    margin-right: 400px;
+    margin-left: 100px;
+}
+.logo{
+    /* padding: 10px 0; */
+    margin-top: 10px;
+}
+.logo img{
+    margin-top: 2px !important;
+    margin-left: 40px;
+}
+.nav{
+    text-align: right;
+}
+.mainmenu{
+    /* display: inline-block; */
+    margin-right: -100px;
+    margin-top: -56px;
+}
+li{
+    list-style: none;
+    display: inline-block;
+    position: relative;
+    z-index: 1;
+}
+li a{
+    text-decoration: none;
+    margin-left: 40px;
+    color:#912a8e;
+    font-weight: 600;
+}
+/* //////////////////////////Search Bar /////////////////////////// */
+
+.c1{
+    /* background-color: #1d3557; */
+    background-color: #912a8e;
+    padding: 120px;
+}
+.c1 .para1{
+    color:white;
+    text-align: center; 
+    font-size: 32px;
+    font-family: Open Sans,sans-serif;
+    font-weight: 800;
+}
+.a1{
+    margin-top: -100px;
+}
+.a1 p{
+    margin-top: 10px;
+    margin-left: 110px;
+}
+.f1{
+    text-align:center;
+    padding: 10px;
+    margin-top: -160px;
+}
+#textf1{
+    height: 50px; 
+    font-family: monospace;
+    border: #912a8e;
+    margin-right: -5px;
+}
+.f1 input{
+    font-size: medium;
+    width: 400px;
+    transform: none ;
+}
+.f2{
+    font-family: monospace;
+    border: #912a8e;
+    text-align: center;
+    margin-top: -62px;
+    margin-left: 26.6%;
+}
+.btn-margin{
+    background-color: #fa1326;
+    color:white;
+    border: none;
+    width: 100px;
+    height: 52px;
+}
+.f2 button:hover{
+    background-color: #630810;
+}
+.a2{
+    text-align: center;
+    color: aliceblue;
+    font-size: small;
+    font-family: monospace;
+    margin-left: 110px;
+}
+
+/*/////////////////////////// trending rooms ////////////////////////////////*/
+.a3{
+    margin-top: 100px;
+    font-family: Open Sans,sans-serif;
+    font-weight: 700;
+    font-size: medium;
+    color: #1e2024;
+    margin-left: 50px;
+
+}
+#a3-1{
+    color: #912a8e;
+    margin-top: -22px;
+    margin-left: 88px;
+}
+.rooms{
+    display: flex;
+    padding: 20px;
+}
+#r1{
+    /* padding: 10px; */
+     margin-left: 50px; 
+}
+#r1-2{
+    margin-left:-21.3%;
+    margin-top: 196px;
+}
+#r1-2 h6{
+    font-size:large;
+    font-weight: bold;
+    font-family:  'Open Sans', sans-serif;
+    margin-top: 10px;
+}
+#a{
+    font-size:small;
+    font-weight: 380;
+    margin-top: -40px;
+}
+#r1-2 h5{
+    color: #912a8e;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family:'Open Sans', sans-serif ;
+    margin-top: -15px;
+}
+#xtra{
+    margin-top: -16px;
+    font-size: x-small;
+    color: cadetblue;
+    margin-top: -40px;
+}
+
+/*///////////////////////////// Featured room /////////////////*/
+.a4{
+    margin-top: 100px;
+    font-family: Open Sans,sans-serif;
+    font-weight: 700;
+    font-size: medium;
+    color: #1e2024;
+    margin-left: 50px;
+
+}
+#a4-1{
+    color: #912a8e;
+    margin-top: -22px;
+    margin-left: 130px;
+}
+.featured-Rooms{
+    display: flex;
+    padding: 20px;
+}
+#r2{
+    /* padding: 10px; */
+     margin-left: 50px; 
+}
+#r2-1{
+    margin-left:-21.3%;
+    margin-top: 196px;
+}
+#r2-1 h6{
+    font-size:large;
+    font-weight: bold;
+    font-family:  'Open Sans', sans-serif;
+    margin-top: 10px;
+}
+
+#r2-1 a{
+    position: relative;
+    padding: 0%;
+    font-size: x-small;
+}
+#r2-1 h5{
+    color: #912a8e;
+    font-weight: bolder;
+    font-size: 20px;
+    font-family:'Open Sans', sans-serif ;
+    margin-top: -15px;
+}
+
+/* @media only screen and (min-width: 600px) {
+    #r2-1 h6 {
+      width: auto;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    #cities-1 img,#cities-1 h6,.cities #av  {
+      display: flex;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    #cities-1 img {
+      margin-bottom: 2rem;
+    }
+  } */
+
+  /*////////////////////////// Destination /////////////////////*/
+.d2 h3{
+    font-family:   Arial;
+    font-size: 20px;
+    font-weight: 600;
+    margin-left: 50px;
+    margin-top: 60px;
+    
+}
+#d2-1{
+    color: #912a8e;
+    font-weight: 400;
+    margin-left: 50px; 
+    margin-top: -10px;
+    font-size: small;
+
+}
+.cities{
+    display: flex;
+}
+#cities-1{
+    margin-left: 30px;
+    margin-top: -15px;
+}
+#cities-1 img{
+    position: relative;
+    margin-top: 25px;
+    border-radius: 8%;
+    box-shadow: 0 6px 20px rgb(56 125 255 / 20%);
+    filter: drop-shadow(0 6px 20px rgba(33, 108, 248, 0.171));
+}
+#cities-1 img:hover{
+    transform: scale(1.1);
+}
+#cities-1 h6{
+    color: black;
+    font-size:medium;
+    font-weight: bold;
+    margin-top: -4px;
+    /* color: #fff;
+    background-color:#1f98f4; */
+}
+
+#cities-1 p{
+    font-weight: 300;
+    font-size: smaller;
+    margin-top: -45px;
+}
+.cities #av{
+    color: black;
+    font-weight: 500;
+    font-size: x-small;
+    margin-top: -20px;
+    margin-left: 84px;
+}
+
+/* @media only screen and (min-width: 1200px) {
+    #cities-1 img,#cities-1 h6,.cities #av  {
+      width: 84%;
+    }
+  }
+  
+  @media only screen and (min-width: 1024px) {
+    #cities-1 img,#cities-1 h6,.cities #av  {
+      display: flex;
+    }
+  }
+  
+  @media only screen and (max-width: 1024px) {
+    #cities-1 img {
+      margin-bottom: 2rem;
+    }
+  } */
+
+  /* //////////////////////////////Footer ?//////////////////// */
+.footer1{
+    background-color: #912a8e;
+    padding: 200px;
+    margin-top: 100px;
+}
+.foot-2{
+    margin-top: -130px;
+}
+.foot-info{
+    color:aliceblue;
+    font-family:  monospace;
+    font-size: small;
+    text-align: center;
+    
+}
+.foot-para{
+    margin-top: -100px;
+}
+.foot-info a{
+    color:#f5182f;
+    text-decoration: none;
+}
+.foot-info a:hover{
+    color: #fff;
+}
+/* footer2 */
+.footer2{
+    background-color: aliceblue;
+    padding: 180px;
+}
+
+/* ///////////////////////////=========Booking========= */
+.personal{
+    padding: 40px;
+    background: cadetblue;  
+    margin-top: 30px;  
+}
+fieldset{
+    margin: 80px 30px;
+    width: 60%;
+    margin-left: 20%;
+    padding: 20px;
+    font-family:'Open Sans', sans-serif ;
+    font-weight: 500;
+}
+legend{
+    font-family:'Open Sans', sans-serif ;
+    font-weight: 600;
+}
+.personal label{
+    font-size: medium;
+    font-family: 'Open Sans', sans-serif;
+    color: aliceblue;
+    margin-left: 30px;
+}
+.personal ::placeholder{
+    font-size: small;
+    font-weight: 100;
+}
+.personal input{
+    font-size:medium ;
+    border: #df293a;
+}
+.Booking{
+    padding: 40px;
+    background: cadetblue;  
+    margin-top: 30px;  
+}
+#BtnSubmit{
+    margin-top: 20px;
+    height: 45px;
+    width: 100px;
+    margin-left: 40%;
+    border: none;
+    background: #f5182f;
+    font-size: medium;
+    color: white;
+}
+#BtnSubmit:hover{
+    background-color: #962b36;
+}
