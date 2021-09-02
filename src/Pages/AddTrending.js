@@ -5,7 +5,6 @@ class AddTrending extends Component{
     state={
         Hotel_name:"",
         Location:"",
-        Address:"",
         Price:"",
         Image:"",
         config:{
@@ -27,9 +26,9 @@ class AddTrending extends Component{
         e.preventDefault();
         const data=new FormData()
 
+        data.append('Image',this.state.Timage)
         data.append('Hotel_name',this.state.Hotel_name)
         data.append('Location',this.state.Location)
-        data.append('Address', this.state.address)
         data.append('Price', this.state.Price)
         data.append('config',this.state.config)
 
@@ -55,7 +54,7 @@ class AddTrending extends Component{
                 <form class="addpro">
                 <p class="addp">Hotel_name<input type="text" name="Hotel_name" value={this.state.Hotel_name} onChange={this.inputHandler}/></p>
                 <p class="addp good">Location<input type="textarea" name="Location"  value={this.state.Location} onChange={this.inputHandler}/></p>
-                <p class="addp good">Address<input type="textarea" name="Address"  value={this.state.Address} onChange={this.inputHandler}/></p>
+               
                 {/* <p class="addp">Price<select class="addp"> <option>Select Type</option>
                     <option name="type" value={this.state.type} onChange={this.inputHandler.select}>Aggressive</option>
                     <option name="type" value={this.state.type} onChange={this.inputHandler.select}>Non-Aggressive</option>

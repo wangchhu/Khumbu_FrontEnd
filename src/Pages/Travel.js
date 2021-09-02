@@ -10,7 +10,13 @@ class Travel extends Component{
        }
    }
    componentDidMount(){
-       axios.get()
+       axios.get('http://localhost:3001/Trending/show')
+       .then((response)=>{
+           console.log(response.data)
+           this.setState({
+               travel: response.data
+           })
+       })
        
    }
 
@@ -74,24 +80,26 @@ class Travel extends Component{
 
         {
             this.state.travel.map((MyTrending)=>{
-                {/* Trending */}
+                return(
+                // {/* Trending */}
         <div>
-        <div class="hotels" id="Trending">
-                <div class="a3">
-                    <p>Trending<p id="a3-1">Now</p></p>
+            <div class="hotels" id="Trending">
+                    <div class="a3">
+                        <p>Trending<p id="a3-1">Now</p></p>
+                    </div>
+                <div class="rooms">
+                    <div id="r1">
+                    <a href="/Book"><img src="/h1.jpg" alt="" height="200px" width="400px"/></a>
+                    </div>
+                    <div id="r1-2">
+                        <h6>{MyTrending.Hotel_name}</h6>
+                        <p id="a">Boudha, Kathmandu<br/></p><h5>NPR 1500</h5><p id="xtra">per room per night</p>
+                    </div>
+                
                 </div>
-            <div class="rooms">
-                <div id="r1">
-                <a href="/Book"><img src="/h1.jpg" alt="" height="200px" width="400px"/></a>
-                </div>
-                <div id="r1-2">
-                    <h6>{MyTrending.Hotel_name}</h6>
-                    <p id="a">Boudha, Kathmandu<br/></p><h5>NPR 1500</h5><p id="xtra">per room per night</p>
-                </div>
-               
             </div>
         </div>
-    </div>
+                )
             })
         }   
         {/* Featured */}

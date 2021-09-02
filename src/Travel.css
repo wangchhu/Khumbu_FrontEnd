@@ -380,3 +380,85 @@ legend{
 #BtnSubmit:hover{
     background-color: #962b36;
 }
+
+
+/* ======AddTrending======= */
+.heading2{
+    color: #3B5998;
+    margin-top: 0%;
+    margin-bottom: 0%;
+    margin-right: 68%;
+  }
+  .Rows{
+    display: flex;
+  
+  }
+  .addp {
+    margin-top: 13px;
+    margin-bottom: 1rem;
+    margin-left: 8%;
+    text-align: left;
+  }
+  .addpro input[type = "text"],.addpro input[type="textarea"],.addpro input[type="Number"],.addpro select {
+    border:0;
+    background: none;
+    display: block;
+    margin: 2px auto;
+    border: 2px solid #3498db;
+    padding: 14px 10px;
+    width: 280px;
+    outline: none;
+    color: white;
+    border-radius: 24px;
+    transition: 0.25s;
+    margin-left: -10px;
+  }
+  .addpro input[type = "text"]:focus,.addpro input[type = "textarea"]:focus, .addpro input[type="Number"]:focus, .addpro select:focus{
+    width: 280px;
+    border-color: #2ecc71;
+  }
+  .addpro select:hover{
+    color: #3498db;
+  }
+  .addp.good input[type="textarea"]{
+    margin-top: 0%;
+    margin-bottom: 0%;
+    height: 120px;
+    text-align: left!important;
+  
+  }
+  .image{
+    margin-bottom: 40%;
+    margin-top: -8rem;
+    margin-left: 100%;
+    flex: 2;
+  }
+  .add{
+    background-color:burlywood;
+    padding: 20px 20px;
+    margin-top:2%;
+   margin-left: 30%;
+   margin-right: 30%;
+   margin-bottom: 40%;
+  }
+  
+  .ciabtn{
+    background-color: white; 
+    color: black; 
+    border: 2px solid #008CBA;
+    padding: 15px 30px;
+    font-size: 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    transition-duration: 0.4s;
+    cursor: pointer;
+    margin-left: 80%;
+    border-radius: 24px;
+  }
+  
+  .ciabtn:hover{
+    background-color: #008CBA;
+    color: white;
+    box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
+  }
