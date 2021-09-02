@@ -4,18 +4,21 @@ import axios from 'axios';
 class Travel extends Component{
 
    state={
-       travel:[],
-       config:{
-           headers:{'authorization':`Bearer ${localStorage.getItem('token')}`}
-       }
+       trending:[]
+    //    config:{
+    //        headers:{'authorization':`Bearer ${localStorage.getItem('token')}`}
+    //    }
    }
    componentDidMount(){
        axios.get('http://localhost:3001/Trending/show')
        .then((response)=>{
            console.log(response.data)
            this.setState({
-               travel: response.data
+               trending: response.data
            })
+       })
+       .catch((err)=>{
+            console.log(err.response)
        })
        
    }
@@ -79,7 +82,7 @@ class Travel extends Component{
         </div>
 
         {
-            this.state.travel.map((MyTrending)=>{
+            this.state.trending.map((MyTrending)=>{
                 return(
                 // {/* Trending */}
         <div>
@@ -89,11 +92,11 @@ class Travel extends Component{
                     </div>
                 <div class="rooms">
                     <div id="r1">
-                    <a href="/Book"><img src="/h1.jpg" alt="" height="200px" width="400px"/></a>
+                    <a href="/Book"><img src={"http://localhost:3001/"+MyTrending.Image} alt="" height="200px" width="400px"/></a>
                     </div>
                     <div id="r1-2">
                         <h6>{MyTrending.Hotel_name}</h6>
-                        <p id="a">Boudha, Kathmandu<br/></p><h5>NPR 1500</h5><p id="xtra">per room per night</p>
+                        <p id="a">{MyTrending.location}<br/></p><h5>NPR {MyTrending.Price}</h5><p id="xtra">per room per night</p>
                     </div>
                 
                 </div>

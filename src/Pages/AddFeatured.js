@@ -7,9 +7,9 @@ class AddFeatured extends Component{
         Location:"",
         Price:"",
         Image:"",
-        config:{
-            headers:{'authorization': `Bearer ${localStorage.getItem('token')}`}
-        }
+        // config:{
+        //     headers:{'authorization': `Bearer ${localStorage.getItem('token')}`}
+        // }
     }
 
     inputHandler=(e)=>{
@@ -19,22 +19,22 @@ class AddFeatured extends Component{
     }
     fileHandler=(e)=>{
         this.setState({
-            // Image:e.target.files[0]
+            fimage:e.target.files[0]
         })
     }
     AddFeatured=(e)=>{
         e.preventDefault();
         const data=new FormData()
-
+        data.append('Image', this.state.fimage)
         data.append('Hotel_name',this.state.Hotel_name)
         data.append('Location',this.state.Location)
         data.append('Price', this.state.Price)
-        data.append('config',this.state.config)
+        // data.append('config',this.state.config)
 
         axios({
             method:'post',
-            url:'http://localhost:3000/Trending/insert',
-            headers:{'authorization': `Bearer ${localStorage.getItem('token')}`},
+            url:'http://localhost:3001/Featured/insert',
+            // headers:{'authorization': `Bearer ${localStorage.getItem('token')}`},
             data:data
         })
         .then((response)=>{
@@ -60,7 +60,7 @@ class AddFeatured extends Component{
                 <p class="addp">Price<input type="Number" name="Price"  value={this.state.Price} onChange={this.inputHandler}/></p>
                 <div class="image"> 
                 <input type="file" name="Image" onChange={this.fileHandler}></input></div>
-               <div class="btncia"> <button class="ciabtn" href="/Travel" onClick={this.AddTrending}>Add</button></div>
+               <div class="btncia"> <button class="ciabtn" href="/Travel" onClick={this.AddFeatured}>Add</button></div>
                 </form>
                 </div>
             </div>

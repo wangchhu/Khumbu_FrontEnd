@@ -1,7 +1,36 @@
 import { Component } from "react";
-
+import axios from 'axios';
 
 class Book extends Component{
+
+    state={
+        client_Username:"",
+        Email:"",
+        Phone:"",
+        Rooms:"",
+        Check_in:"",
+        Check_out:"",
+        Guest:""
+    }
+
+    SendUserData=()=>{
+        const data={
+            client_Username:this.state.client_Username,
+            Email:this.state.Email,
+            Phone:this.state.Phone,
+            Rooms:this.state.Rooms,
+            Check_in:this.state.Check_in,
+            Check_out:this.state.Check_out,
+            Guest:this.state.Check_out
+        }
+        axios.post("http://localhost:3001/client/insert", data)
+        .then((response)=>{
+            console.log(response)
+        })
+        .catch((err)=>{
+            console.log(err.response)
+        })
+    }
     render(){
         return(
             <div>           
@@ -11,11 +40,11 @@ class Book extends Component{
                 <fieldset>  
                     <legend>Personal Details</legend>
               <label for="name" id="name">Username</label>  
-              <input type="text" id="name" placeholder="username" pattern="[a-zA-Z]"/>
+              <input type="text" id="name" name="client_Username" placeholder="username" pattern="[a-zA-Z]" value={this.state.client_Username} onChange={(event)=>{this.setState({client_Username:event.target.value})}}/>
               <label for="email">E-mail</label>  
-              <input type="text" id="email" placeholder="e-mail"/>
+              <input type="text" id="email" name="Email" placeholder="e-mail" value={this.state.Email} onChange={(event)=>{this.setState({Email:event.target.value})}}/>
               <label for="phone">Phone</label>  
-              <input type="number" id="phone" placeholder="phone"/>
+              <input type="number" id="phone" name="Phone" placeholder="phone" value={this.state.Phone} onChange={(event)=>{this.setState({Phone:event.target.value})}}/>
              </fieldset>
             </div>
              <br/>

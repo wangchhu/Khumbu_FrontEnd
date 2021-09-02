@@ -7,9 +7,9 @@ class AddTrending extends Component{
         Location:"",
         Price:"",
         Image:"",
-        config:{
-            headers:{'authorization': `Bearer ${localStorage.getItem('token')}`}
-        }
+        // config:{
+        //     headers:{'authorization': `Bearer ${localStorage.getItem('token')}`}
+        // }
     }
 
     inputHandler=(e)=>{
@@ -19,7 +19,7 @@ class AddTrending extends Component{
     }
     fileHandler=(e)=>{
         this.setState({
-            // Image:e.target.files[0]
+          Timage:e.target.files[0]
         })
     }
     AddTrending=(e)=>{
@@ -34,8 +34,8 @@ class AddTrending extends Component{
 
         axios({
             method:'post',
-            url:'http://localhost:3000/Trending/insert',
-            headers:{'authorization': `Bearer ${localStorage.getItem('token')}`},
+            url:'http://localhost:3001/Trending/insert',
+            // headers:{'authorization': `Bearer ${localStorage.getItem('token')}`},
             data:data
         })
         .then((response)=>{
