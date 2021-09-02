@@ -32,6 +32,21 @@ class Book extends Component{
         })
     }
 
+    constructor(props) {
+        super(props);
+        this.state = {value: '1'};
+    
+        this.handleChange = this.handleChange.bind(this);
+        this.handleSubmit = this.handleSubmit.bind(this);
+      }
+    
+      handleChange(event) {
+        this.setState({Rooms: event.target.value});
+      }
+    
+      handleSubmit(event) {
+        event.preventDefault();
+      }
 
     render(){
         return(
@@ -53,7 +68,7 @@ class Book extends Component{
              <div class="Booking">
              <fieldset>
                  <legend>Booking Details</legend>
-              <select name="Rooms" value={this.state.Rooms} onChange={(event)=>{this.setState({Rooms:event.target.value})}}>
+              <select name="Rooms" value={this.state.Rooms} onChange={this.handleChange}>
                   <option value="">Rooms</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -70,7 +85,7 @@ class Book extends Component{
               <input type="date" name="Check_in" placeholder="Check-in" min="2021-05-05" value={this.state.Check_in} onChange={(event)=>{this.setState({Check_in:event.target.value})}}/>
               <label for="">Check-out</label>  
               <input type="date" name="Check_out "placeholder="Check-out" value={this.state.Check_out} onChange={(event)=>{this.setState({Check_out:event.target.value})}}/>
-             <select name="Guest" value={this.state.Guest} onChange={(event)=>{this.setState({Guest:event.target.value})}} required>
+             <select name="Guest" value={this.state.Guest} onChange={this.handleChange} required>
                   <option value="">Guests</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
