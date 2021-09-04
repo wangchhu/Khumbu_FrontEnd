@@ -12,63 +12,77 @@ class Book extends Component{
         Check_out:"",
         Guest:""
     }
+    
+    inputHandler=(e)=>{
+        this.setState({
+            [e.target.name]: e.target.value
+        })
+    }
 
-    SendUserData=()=>{
-        const data={
-            client_Username:this.state.client_Username,
-            Email:this.state.Email,
-            Phone:this.state.Phone,
-            Rooms:this.state.Rooms,
-            Check_in:this.state.Check_in,
-            Check_out:this.state.Check_out,
-            Guest:this.state.Check_out
-        }
-        axios.post("http://localhost:3001/client/insert", data)
+    Book=(e)=>{
+        e.preventDefault();
+        const data=new FormData();
+
+        data.append('client_Username', this.state.client_Username)
+        data.append('Email',this.state.Email)
+        data.append('Phone',this.state.Phone)
+        data.append('Rooms',this.state.Rooms)
+        data.append('Check_in',this.state.Check_in)
+        data.append('Check_out', this.state.Check_out)
+        data.append('Guest', this.state.Guest)
+
+        axios({
+            method: 'post',
+            url:"http://localhost:3001/client/insert",
+            data:data
+        })
+            // client_Username:this.state.client_Username,
+            // Email:this.state.Email,
+            // Phone:this.state.Phone,
+            // Rooms:this.state.Rooms,
+            // Check_in:this.state.Check_in,
+            // Check_out:this.state.Check_out,
+            // Guest:this.state.Check_out
+        
+        // axios.post("http://localhost:3001/client/insert", data)
         .then((response)=>{
             console.log(response)
         })
         .catch((err)=>{
             console.log(err.response)
         })
+
     }
 
-    constructor(props) {
-        super(props);
-        this.state = {value: '1'};
-    
-        this.handleChange = this.handleChange.bind(this);
-        this.handleSubmit = this.handleSubmit.bind(this);
-      }
-    
-      handleChange(event) {
-        this.setState({Rooms: event.target.value});
-      }
-    
-      handleSubmit(event) {
-        event.preventDefault();
-      }
-
+    // changeHandler =(e)=>{
+    //     this.setState({
+    //         [e.target.name] : e.target.value
+    //     }
+    //     )
+    // }
+        
     render(){
         return(
             <div>           
              <div class="form">
-            <form action="" method="GET">
+            <form action="" method="POST">
                 <div class="personal">
                 <fieldset>  
                     <legend>Personal Details</legend>
               <label for="name" id="name">Username</label>  
-              <input type="text" id="name" name="client_Username" placeholder="username"  value={this.state.client_Username} onChange={(event)=>{this.setState({client_Username:event.target.value})}}/>
+              <input type="text" id="name" name="client_Username" placeholder="username"  value={this.state.client_Username} onChange={this.inputHandler}/>
               <label for="email">E-mail</label>  
-              <input type="text" id="email" name="Email" placeholder="e-mail" value={this.state.Email} onChange={(event)=>{this.setState({Email:event.target.value})}}/>
+              <input type="text" id="email" name="Email" placeholder="e-mail" value={this.state.Email} onChange={this.inputHandler}/>
               <label for="phone">Phone</label>  
-              <input type="number" id="phone" name="Phone" placeholder="phone" value={this.state.Phone} onChange={(event)=>{this.setState({Phone:event.target.value})}}/>
+              <input type="number" id="phone" name="Phone" placeholder="phone" value={this.state.Phone} onChange={this.inputHandler}/>
              </fieldset>
             </div>
              <br/>
              <div class="Booking">
              <fieldset>
                  <legend>Booking Details</legend>
-              <select name="Rooms" value={this.state.Rooms} onChange={this.handleChange}>
+              <select name="Rooms" value={this.state.Rooms}
+                                     onChange={this.inputHandler}>
                   <option value="">Rooms</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -82,10 +96,11 @@ class Book extends Component{
                   <option value="10">10</option>
               </select>
               <label for="">Check-in</label>  
-              <input type="date" name="Check_in" placeholder="Check-in" min="2021-05-05" value={this.state.Check_in} onChange={(event)=>{this.setState({Check_in:event.target.value})}}/>
+              <input type="date" name="Check_in" placeholder="Check-in" min="2021-05-05" />
               <label for="">Check-out</label>  
-              <input type="date" name="Check_out "placeholder="Check-out" value={this.state.Check_out} onChange={(event)=>{this.setState({Check_out:event.target.value})}}/>
-             <select name="Guest" value={this.state.Guest} onChange={this.handleChange} required>
+              <input type="date" name="Check_out "placeholder="Check-out" />
+             <select name="Guest" value={this.state.Guest} 
+                            onChange={this.inputHandler} required>
                   <option value="">Guests</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
@@ -99,7 +114,7 @@ class Book extends Component{
                   <option value="10">10</option>
               </select>
               <br/>
-              <button id="BtnSubmit" onClick={this.SendUserData}>Submit</button>
+              <button id="BtnSubmit" onClick={this.Book}>Submit</button>
               </fieldset>
               </div>
             </form>

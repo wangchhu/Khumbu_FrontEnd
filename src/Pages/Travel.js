@@ -3,8 +3,10 @@ import axios from 'axios';
 
 class Travel extends Component{
 
-   state={
-       trending:[]
+   state ={
+       trending: [],
+       featured: [],
+       citeies: []
     //    config:{
     //        headers:{'authorization':`Bearer ${localStorage.getItem('token')}`}
     //    }
@@ -22,6 +24,35 @@ class Travel extends Component{
        })
        
    }
+   componentDidMount2(){
+    axios.get('http://localhost:3001/Featured/show')
+    .then((response)=>{
+        console.log(response.data)
+        this.setState({
+            featured: response.data
+        })
+    })
+    .catch((err)=>{
+         console.log(err.response)
+    })
+    
+}
+
+componentDidMount3(){
+    axios.get('http://localhost:3001/Cities/show')
+    .then((response)=>{
+        console.log(response.data)
+        this.setState({
+            featured: response.data
+        })
+    })
+    .catch((err)=>{
+         console.log(err.response)
+    })
+    
+}
+
+
 
     render(){
         return(
@@ -137,21 +168,6 @@ class Travel extends Component{
                             <h6><label>Los Angeles</label></h6>
                             <p>500 Hotels <p id="av">Avg. $120</p></p>
                         </div>
-                        {/* <div id="cities-1">
-                            <img src="Public/los.jpg" alt="" height="250px" width="250px">
-                            <h6>Los Angeles</h6>
-                            <p>5,990 Hotels <a id="av">Avg. $175</a></p>
-                        </div>
-                        <div id="cities-1">
-                            <img src="Public/los.jpg" alt="" height="250px" width="250px">
-                            <h6>Los Angeles</h6>
-                            <p>5,990 Hotels <a id="av">Avg. $200</a></p>
-                        </div>
-                        <div id="cities-1">
-                            <img src="Public/los.jpg" alt="" height="250px" width="250px">
-                            <h6>Los Angeles</h6>
-                            <p>5,990 Hotels <a id="av">Avg. $300</a></p>
-                        </div> */}
                     </div>
                 </div>
             </div>
