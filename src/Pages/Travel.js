@@ -1,4 +1,4 @@
-import { Component } from "react";
+import React, { Component } from "react";
 import axios from 'axios';
 
 class Travel extends Component{
@@ -99,9 +99,15 @@ componentDidMount3(){
                     </div>
                 </div>
             </div>
-
             <div class="f1">
-            <input id="textf1" type="text" placeholder="Search your destination" width="30" height="30"/>    
+            <input id="textf1" type="text" placeholder="Search your destination" width="30" height="30"/>   
+             {/* <div class="autocom-box">
+                 <li>Hotel near me</li>
+                 <li>Hotel Hyatt</li>
+                 <li>Budegt Hotel rooms</li>
+                 <li>Los angeles</li>
+                 <li>Kathmandu</li>
+             </div> */}
             </div>
             <div class="f2">
             <button class="btn-margin">Search</button>    
@@ -113,14 +119,21 @@ componentDidMount3(){
         </div>
 
         {
+        
             this.state.trending.map((MyTrending)=>{
                 return(
                 // {/* Trending */}
         <div>
+            {
+                                console.log("THIIS IS RUNNING")
+            }
+
             <div class="hotels" id="Trending">
                     <div class="a3">
                         <p>Trending<p id="a3-1">Now</p></p>
                     </div>
+                    <h1>HELLO</h1>
+
                 <div class="rooms">
                     <div id="r1">
                     <a href="/Book"><img src={"http://localhost:3001/"+MyTrending.Image} alt="" height="200px" width="400px"/></a>
@@ -144,7 +157,7 @@ componentDidMount3(){
                 </div>
                 <div class="featured-Rooms">
                     <div id="r2">
-                        <img src="/h1.jpg" alt="" height="200px" width="400px"/>
+                    <a href="/Book"> <img src="/h1.jpg" alt="" height="200px" width="400px"/></a>
                     </div>
                         <div id="r2-1">
                             <h6>Hotel Everest</h6>

@@ -336,6 +336,18 @@ li a{
     background: cadetblue;  
     margin-top: 30px;  
 }
+.btnbook{
+    height: 40px;
+    width: 100px;
+    border: none;
+    background-color: #f5182f;
+    font-size: medium;
+  
+}
+.btnbook a{
+    text-decoration: none;
+    color: #fff;
+}
 fieldset{
     margin: 80px 30px;
     width: 60%;
@@ -354,6 +366,21 @@ legend{
     color: aliceblue;
     margin-left: 30px;
 }
+
+
+.Booking label{
+    font-size: medium;
+    font-family: 'Open Sans', sans-serif;
+    color: aliceblue;
+    margin-left: 70px;
+}
+.Booking select{
+    font-size: medium;
+    font-family: 'Open Sans', sans-serif;
+    background-color: aliceblue;
+    margin-left: 10px;
+    margin-top: 15px;
+}
 .personal ::placeholder{
     font-size: small;
     font-weight: 100;
@@ -361,11 +388,22 @@ legend{
 .personal input{
     font-size:medium ;
     border: #df293a;
+    margin-left: 20px;
+    margin-top: 20px;
+    
 }
+
 .Booking{
     padding: 40px;
     background: cadetblue;  
     margin-top: 30px;  
+}
+.Booking input{
+    font-size:medium ;
+    border: #df293a;
+    margin-left: 20px;
+    margin-top: 20px;
+    
 }
 #BtnSubmit{
     margin-top: 20px;
@@ -382,7 +420,7 @@ legend{
 }
 
 
-/* ======AddTrending======= */
+/* ======AddTrending ,,, AddFeatured &&&& AddCities======= */
 .heading2{
     color: #3B5998;
     margin-top: 0%;
@@ -462,3 +500,6 @@ legend{
     color: white;
     box-shadow: 0 12px 16px 0 rgba(0,0,0,0.24), 0 17px 50px 0 rgba(0,0,0,0.19);
   }
+
+  /*-------------- Search Bar-----auto--------------- */
+
