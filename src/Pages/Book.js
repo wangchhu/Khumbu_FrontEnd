@@ -20,31 +20,36 @@ class Book extends Component{
     }
 
     Book=(e)=>{
+        console.log(this.state)
         e.preventDefault();
-        const data=new FormData();
+        const data={
+            'client_Username':this.state.client_Username,
+            'Email': this.state.Email,
+            'Phone':this.state.Phone,
+            'Check_in':this.state.Check_in,
+            'Check_out': this.state.Check_out,
+            'Rooms':this.state.Rooms,
+            'Guest': this.state.Guest
+        };
 
-        data.append('client_Username', this.state.client_Username)
-        data.append('Email',this.state.Email)
-        data.append('Phone',this.state.Phone)
-        data.append('Check_in',this.state.Check_in)
-        data.append('Check_out', this.state.Check_out)
-        data.append('Rooms',this.state.Rooms)
-        data.append('Guest', this.state.Guest)
 
-        axios({
-            method: 'post',
-            url:"http://localhost:3001/client/insert",
-            data:data
-        })
-            // client_Username:this.state.client_Username,
-            // Email:this.state.Email,
-            // Phone:this.state.Phone,
-            // Rooms:this.state.Rooms,
-            // Check_in:this.state.Check_in,
-            // Check_out:this.state.Check_out,
-            // Guest:this.state.Check_out
+
+
+        console.log(data)
+        // axios({
+        //     method: 'post',
+        //     url:"http://localhost:3001/client/insert",
+        //     data:data
+        // })
+        //     // client_Username:this.state.client_Username,
+        //     // Email:this.state.Email,
+        //     // Phone:this.state.Phone,
+        //     // Rooms:this.state.Rooms,
+        //     // Check_in:this.state.Check_in,
+        //     // Check_out:this.state.Check_out,
+        //     // Guest:this.state.Check_out
         
-        // axios.post("http://localhost:3001/client/insert", data)
+        axios.post("http://localhost:3001/client/insert", data)
         .then((response)=>{
             console.log(response)
         })
@@ -60,8 +65,30 @@ class Book extends Component{
     //     }
     //     )
     // }
+    SelectChange = e=>(
+        this.setState({
+            Rooms: e.target.value
+        },()=>{
+            console.log(this.state)
+        })
+       
+    )
+    selectRoom (Arr){
         
+        return Arr.map((value, key)=>(
+            <>
+            <option key={key} value= {value}>{value}</option>
+            </>
+        ))
+        
+                  
+    }
+        
+    componentDidMount(){
+        console.log(this.state)
+    }
     render(){
+        let values = [1,2,3,4,5,6,7,8,9, 10]
         return(
             <div class="container">           
              <div class="form">
@@ -93,24 +120,15 @@ class Book extends Component{
               <label for="">Check-out</label>  
               <input type="date" name="Check_out "placeholder="Check-out" />
                 <label>No. of Room</label>
-              <select name="Rooms" value={this.state.Rooms}
-                                     onChange={this.inputHandler}>
-                  <option value=""></option>
-                  <option value="1">1</option>
-                  <option value="2">2</option>
-                  <option value="3">3</option>
-                  <option value="4">4</option> 
-                  <option value="5">5</option>
-                  <option value="6">6</option>
-                  <option value="7">7</option>
-                  <option value="8">8</option>
-                  <option value="9">9</option>
-                  <option value="10">10</option>
+                <select name="Rooms" value={this.state.Rooms}
+                                     onChange={this.SelectChange}>
+                                         <option value="">... </option>
+                 {this.selectRoom(values)}
               </select>
               <label>No. of Guest</label>
              <select name="Guest" value={this.state.Guest} 
                             onChange={this.inputHandler} required>
-                  <option value=""></option>
+                  <option value="">...</option>
                   <option value="1">1</option>
                   <option value="2">2</option>
                   <option value="3">3</option>
