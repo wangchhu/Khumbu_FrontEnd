@@ -10,11 +10,14 @@ class Travel extends Component{
     //    config:{
     //        headers:{'authorization':`Bearer ${localStorage.getItem('token')}`}
     //    }
-   }
+       };
+
+
    componentDidMount(){
        axios.get('http://localhost:3001/Trending/show')
+      
        .then((response)=>{
-           console.log(response.data.data)
+           console.log(response)
            this.setState({
                trending: response.data.data
            })
@@ -25,32 +28,33 @@ class Travel extends Component{
        
    }
    componentDidMount2(){
-    axios.get('http://localhost:3001/Featured/show')
+    axios.get('http://localhost:3001/featured/show')
     .then((response)=>{
-        console.log(response.data.data)
+        console.log(response)
         this.setState({
             featured: response.data.data
         })
     })
     .catch((err)=>{
          console.log(err.response)
+     
     })
     
 }
 
-componentDidMount3(){
-    axios.get('http://localhost:3001/Cities/show')
-    .then((response)=>{
-        console.log(response.data)
-        this.setState({
-            featured: response.data
-        })
-    })
-    .catch((err)=>{
-         console.log(err.response)
-    })
+// componentDidMount3(){
+//     axios.get('http://localhost:3001/Cities/show')
+//     .then((response)=>{
+//         console.log(response.data)
+//         this.setState({
+//             featured: response.data
+//         })
+//     })
+//     .catch((err)=>{
+//          console.log(err.response)
+//     })
     
-}
+// }
 
     render(){
         return(
@@ -117,38 +121,39 @@ componentDidMount3(){
                     <div class="a3">
                         <p>Trending<p id="a3-1">Now</p></p>
                     </div>
+                    <div style={{'display':'flex','justifyContent':'center'}}>
         { this.state.trending.map((MyTrending)=>{
                 return(
                 // {/* Trending */}
-        <div>
+        <div class="flexy" style={{'width':'25%'}}>
                    <div class="hotels" id="Trending">
+
                 <div class="rooms">
                     <div id="r1">
-                    <a href="/Book"><img src={"http://localhost:3001/"+ MyTrending.Image} alt="" height="200px" width="400px"/></a>
+                    <a href="/Book"><img src={"http://localhost:3001/" + MyTrending.path} alt="" height="200px" width="400px"/></a>
                     </div>
                     <div id="r1-2">
                         <h6>{MyTrending.Hotel_name}</h6>
                         <p id="a">{MyTrending.Location}<br/></p><h5>NPR {MyTrending.Price}</h5><p id="xtra">per room per night</p>
                     </div>
-                
                 </div>
             </div>
         </div>
                 )
             })
-        }
+    
+        }</div>
 
          {/* Featured */}
          <div class="a4">
                          <p>Our Featured <p id="a4-1">Hotels</p></p>
-                     </div>
-
+         </div>
         {this.state.featured.map((MyFeatured)=>{
             return(
                  <div>
                  <div class="hotels-2">
-                   
                      <div class="featured-Rooms">
+
                          <div id="r2">
                          <a href="/Book"> <img src={"http://localhost:3001/"+MyFeatured.Image}  alt="" height="200px" width="400px"/></a>
                          </div>

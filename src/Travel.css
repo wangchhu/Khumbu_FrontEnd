@@ -112,27 +112,39 @@ li a{
     margin-top: 100px;
     font-family: Open Sans,sans-serif;
     font-weight: 700;
-    font-size: medium;
+    font-size: large;
     color: #1e2024;
     margin-left: 50px;
 
 }
 #a3-1{
     color: #912a8e;
-    margin-top: -22px;
-    margin-left: 88px;
+    margin-top: -27.5px;
+    margin-left: 106px;
 }
+/* .flexy{
+    display: flex !important;
+    justify-content: center;
+} */
 .rooms{
     display: flex;
-    padding: 20px;
+    padding: 0px;
+    width: 100%;
+    
+}
+.rooms div{
+    width:40%;
 }
 #r1{
     /* padding: 10px; */
-     margin-left: 50px; 
+     margin-left: 40px; 
+    
+  
 }
 #r1-2{
-    margin-left:-21.3%;
+    margin-left:-39.3%;
     margin-top: 196px;
+   
 }
 #r1-2 h6{
     font-size:large;
@@ -164,15 +176,15 @@ li a{
     margin-top: 100px;
     font-family: Open Sans,sans-serif;
     font-weight: 700;
-    font-size: medium;
+    font-size:large;
     color: #1e2024;
     margin-left: 50px;
 
 }
 #a4-1{
     color: #912a8e;
-    margin-top: -22px;
-    margin-left: 130px;
+    margin-top: -27.5px;
+    margin-left: 157px;
 }
 .featured-Rooms{
     display: flex;
