@@ -36,11 +36,11 @@ class Book extends Component{
 
 
         console.log(data)
-        // axios({
-        //     method: 'post',
-        //     url:"http://localhost:3001/client/insert",
-        //     data:data
-        // })
+        axios({
+            method: 'post',
+            url:"http://localhost:3001/client/insert",
+            data:data
+        })
         //     // client_Username:this.state.client_Username,
         //     // Email:this.state.Email,
         //     // Phone:this.state.Phone,
@@ -49,7 +49,7 @@ class Book extends Component{
         //     // Check_out:this.state.Check_out,
         //     // Guest:this.state.Check_out
         
-        axios.post("http://localhost:3001/client/insert", data)
+        // axios.post("http://localhost:3001/client/insert", data)
         .then((response)=>{
             console.log(response)
         })
@@ -116,9 +116,9 @@ class Book extends Component{
                  <legend>Booking Details</legend>            
               
               <label for="">Check-in</label>  
-              <input type="date" name="Check_in" placeholder="Check-in" min="2021-05-05" />
+              <input type="date" name="Check_in" placeholder="Check-in" min="2021-05-05"  value={this.state.Check_in} onChange={this.inputHandler}/>
               <label for="">Check-out</label>  
-              <input type="date" name="Check_out "placeholder="Check-out" />
+              <input type="date" name="Check_out"placeholder="Check-out"  value={this.state.Check_out} onChange={this.inputHandler} />
                 <label>No. of Room</label>
                 <select name="Rooms" value={this.state.Rooms}
                                      onChange={this.SelectChange}>

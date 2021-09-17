@@ -14,9 +14,9 @@ class Travel extends Component{
    componentDidMount(){
        axios.get('http://localhost:3001/Trending/show')
        .then((response)=>{
-           console.log(response.data)
+           console.log(response.data.data)
            this.setState({
-               trending: response.data
+               trending: response.data.data
            })
        })
        .catch((err)=>{
@@ -41,7 +41,7 @@ class Travel extends Component{
 componentDidMount3(){
     axios.get('http://localhost:3001/Cities/show')
     .then((response)=>{
-        console.log(response.data)
+        console.log("array",response.data)
         this.setState({
             featured: response.data
         })
@@ -124,16 +124,11 @@ componentDidMount3(){
                 return(
                 // {/* Trending */}
         <div>
-            {
-                                console.log("THIIS IS RUNNING")
-            }
 
             <div class="hotels" id="Trending">
                     <div class="a3">
                         <p>Trending<p id="a3-1">Now</p></p>
                     </div>
-                    <h1>HELLO</h1>
-
                 <div class="rooms">
                     <div id="r1">
                     <a href="/Book"><img src={"http://localhost:3001/"+MyTrending.Image} alt="" height="200px" width="400px"/></a>
