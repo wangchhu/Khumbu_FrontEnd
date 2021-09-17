@@ -6,7 +6,7 @@ class Travel extends Component{
    state ={
        trending: [],
        featured: [],
-       citeies: []
+       cities: []
     //    config:{
     //        headers:{'authorization':`Bearer ${localStorage.getItem('token')}`}
     //    }
@@ -27,9 +27,9 @@ class Travel extends Component{
    componentDidMount2(){
     axios.get('http://localhost:3001/Featured/show')
     .then((response)=>{
-        console.log(response.data)
+        console.log(response.data.data)
         this.setState({
-            featured: response.data
+            featured: response.data.data
         })
     })
     .catch((err)=>{
@@ -41,7 +41,7 @@ class Travel extends Component{
 componentDidMount3(){
     axios.get('http://localhost:3001/Cities/show')
     .then((response)=>{
-        console.log("array",response.data)
+        console.log(response.data)
         this.setState({
             featured: response.data
         })
@@ -51,8 +51,6 @@ componentDidMount3(){
     })
     
 }
-
-
 
     render(){
         return(
@@ -115,27 +113,22 @@ componentDidMount3(){
             <div class="a2">
                 <p>From cosy country homes to funky city flats</p>
             </div>
-            
-        </div>
-
-        {
-        
-            this.state.trending.map((MyTrending)=>{
-                return(
-                // {/* Trending */}
-        <div>
-
-            <div class="hotels" id="Trending">
+        </div>        
                     <div class="a3">
                         <p>Trending<p id="a3-1">Now</p></p>
                     </div>
+        { this.state.trending.map((MyTrending)=>{
+                return(
+                // {/* Trending */}
+        <div>
+                   <div class="hotels" id="Trending">
                 <div class="rooms">
                     <div id="r1">
-                    <a href="/Book"><img src={"http://localhost:3001/"+MyTrending.Image} alt="" height="200px" width="400px"/></a>
+                    <a href="/Book"><img src={"http://localhost:3001/"+ MyTrending.Image} alt="" height="200px" width="400px"/></a>
                     </div>
                     <div id="r1-2">
                         <h6>{MyTrending.Hotel_name}</h6>
-                        <p id="a">{MyTrending.location}<br/></p><h5>NPR {MyTrending.Price}</h5><p id="xtra">per room per night</p>
+                        <p id="a">{MyTrending.Location}<br/></p><h5>NPR {MyTrending.Price}</h5><p id="xtra">per room per night</p>
                     </div>
                 
                 </div>
@@ -143,25 +136,34 @@ componentDidMount3(){
         </div>
                 )
             })
-        }   
-        {/* Featured */}
-        <div>
-            <div class="hotels-2">
-                <div class="a4">
-                    <p>Our Featured <p id="a4-1">Hotels</p></p>
-                </div>
-                <div class="featured-Rooms">
-                    <div id="r2">
-                    <a href="/Book"> <img src="/h1.jpg" alt="" height="200px" width="400px"/></a>
-                    </div>
-                        <div id="r2-1">
-                            <h6>Hotel Everest</h6>
-                            <p id="a">Boudha, Kathmandu<br/></p><h5>NPR 2200</h5><p id="xtra">per room per night</p>
-                        </div>
-                    
-                </div>
-            </div>
-        </div>
+        }
+
+         {/* Featured */}
+         <div class="a4">
+                         <p>Our Featured <p id="a4-1">Hotels</p></p>
+                     </div>
+
+        {this.state.featured.map((MyFeatured)=>{
+            return(
+                 <div>
+                 <div class="hotels-2">
+                   
+                     <div class="featured-Rooms">
+                         <div id="r2">
+                         <a href="/Book"> <img src={"http://localhost:3001/"+MyFeatured.Image}  alt="" height="200px" width="400px"/></a>
+                         </div>
+                             <div id="r2-1">
+                                 <h6>{MyFeatured.Hotel_name}</h6>
+                                 <p id="a">{MyFeatured.Location}<br/></p><h5>NPR {MyFeatured.Price}</h5><p id="xtra">per room per night</p>
+                             </div>
+                         
+                     </div>
+                 </div>
+             </div>
+            )
+        })
+       
+    }
         {/* Destination  */}
         <div>
             <div class="container" id="Destination">
