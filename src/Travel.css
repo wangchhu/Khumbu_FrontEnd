@@ -51,6 +51,8 @@ li a{
     /* background-color: #1d3557; */
     background-color: #912a8e;
     padding: 120px;
+    background-image: url('./anime/ani44.PNG');
+    
 }
 .c1 .para1{
     color:white;
@@ -101,13 +103,20 @@ li a{
 }
 .a2{
     text-align: center;
-    color: aliceblue;
+    color: #912a8e;
     font-size: small;
     font-family: monospace;
     margin-left: 110px;
 }
 
 /*/////////////////////////// trending rooms ////////////////////////////////*/
+
+.load{
+    color:#fd2439;
+    font-size: larger;
+    font-weight: 500;
+    margin-left: 50%;
+}
 .a3{
     margin-top: 100px;
     font-family: Open Sans,sans-serif;

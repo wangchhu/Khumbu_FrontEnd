@@ -33,8 +33,6 @@ class Book extends Component{
         };
 
 
-
-
         console.log(data)
         axios({
             method: 'post',
@@ -52,6 +50,7 @@ class Book extends Component{
         // axios.post("http://localhost:3001/client/insert", data)
         .then((response)=>{
             console.log(response)
+           
         })
         .catch((err)=>{
             console.log(err.response)
@@ -95,8 +94,8 @@ class Book extends Component{
             <form action="" method="POST">
                 <div class="personal">
                         <div>
-                           <button href="/" class="btnbook" >
-                           <a href="/">  Back</a>
+                           <button class="btnbook" >
+                           <a href="/"> Back</a>
                             </button>
                         </div>
                 <fieldset>  
@@ -142,6 +141,7 @@ class Book extends Component{
               </select>
               <br/>
               <button id="BtnSubmit" onClick={this.Book}>Submit</button>
+             
               </fieldset>
               
               </div>
