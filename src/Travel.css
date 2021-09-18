@@ -27,6 +27,7 @@
 }
 .nav{
     text-align: right;
+  
 }
 .mainmenu{
     /* display: inline-block; */
@@ -39,6 +40,25 @@ li{
     position: relative;
     z-index: 1;
 }
+.mainmenu ul li{
+    color:#912a8e;
+    text-decoration: none;
+    position: relative;
+}
+.mainmenu ul li::after{
+    content: '';
+    width: 0%;
+    height: 10%;
+    position: absolute;
+    bottom: -5px;
+    left: 65%;
+    transform: translateX(-50%);
+    background-color:#da11d354;
+    transition: width 0.3s;
+}
+.mainmenu ul li:hover::after{
+    width: 34%;
+}
 li a{
     text-decoration: none;
     margin-left: 40px;
@@ -50,28 +70,49 @@ li a{
 .c1{
     /* background-color: #1d3557; */
     background-color: #912a8e;
-    padding: 120px;
+    padding: 140px;
     background-image: url('./anime/ani44.PNG');
     
 }
+.tibet h1{
+    font-size: 140px;
+    line-height: 140px;
+    margin-left:35px;
+    position: absolute;
+    margin-top: -90px;
+    color: transparent;
+    -webkit-text-stroke: 1px #e9e3e9;
+    background: url('./anime/back.png');
+    -webkit-background-clip: text;
+    background-position: 0 0;
+    animation: back 20s linear infinite;
+}
+@keyframes back{
+    100%{
+        background-position: 2000px 0;
+    }
+}
+
 .c1 .para1{
     color:white;
     text-align: center; 
-    font-size: 32px;
+    font-size: 40px;
     font-family: Open Sans,sans-serif;
     font-weight: 800;
 }
+
 .a1{
-    margin-top: -100px;
+    margin-top: -42px;
 }
 .a1 p{
-    margin-top: 10px;
-    margin-left: 110px;
+    margin-top: -44px;
+    position: absolute;
+    margin-left: 31.4%;
 }
 .f1{
     text-align:center;
     padding: 10px;
-    margin-top: -160px;
+    margin-top: -179px;
 }
 #textf1{
     height: 50px; 
@@ -122,12 +163,13 @@ li a{
     font-family: Open Sans,sans-serif;
     font-weight: 700;
     font-size: large;
-    color: #1e2024;
+    color: #592488;
     margin-left: 50px;
 
 }
 #a3-1{
-    color: #912a8e;
+    color: #ff9100;
+    /* color: linear-gradient(90deg, rgba(123,44,191,1) 0%, rgba(255,145,0,1) 100%); */
     margin-top: -27.5px;
     margin-left: 106px;
 }
@@ -186,25 +228,26 @@ li a{
     font-family: Open Sans,sans-serif;
     font-weight: 700;
     font-size:large;
-    color: #1e2024;
+    color: #592488;
     margin-left: 50px;
 
 }
 #a4-1{
-    color: #912a8e;
+    color: #ff9100;
     margin-top: -27.5px;
     margin-left: 157px;
 }
 .featured-Rooms{
     display: flex;
-    padding: 20px;
+    padding: 0px;
+    width: 100%;
 }
 #r2{
     /* padding: 10px; */
-     margin-left: 50px; 
+    margin-left: 40px; 
 }
 #r2-1{
-    margin-left:-21.3%;
+    margin-left:-82.3%;
     margin-top: 196px;
 }
 #r2-1 h6{
@@ -214,11 +257,11 @@ li a{
     margin-top: 10px;
 }
 
-#r2-1 a{
+/* #r2-1 a{
     position: relative;
     padding: 0%;
     font-size: x-small;
-}
+} */
 #r2-1 h5{
     color: #912a8e;
     font-weight: bolder;
@@ -248,18 +291,20 @@ li a{
   /*////////////////////////// Destination /////////////////////*/
 .d2 h3{
     font-family:   Arial;
-    font-size: 20px;
-    font-weight: 600;
-    margin-left: 50px;
+    font-size: 41px;
+    font-weight: 800;
+    margin-left: 25%;
     margin-top: 60px;
+    color: transparent;
+    -webkit-text-stroke: 1px #592488;
     
 }
 #d2-1{
-    color: #912a8e;
-    font-weight: 400;
-    margin-left: 50px; 
+    color: #f5182f;
+    font-weight: 500;
+    margin-left: 49%;
     margin-top: -10px;
-    font-size: small;
+    font-size: large;
 
 }
 .cities{
@@ -280,7 +325,7 @@ li a{
     transform: scale(1.1);
 }
 #cities-1 h6{
-    color: black;
+    color: #592488;
     font-size:medium;
     font-weight: bold;
     margin-top: -4px;
@@ -294,7 +339,7 @@ li a{
     margin-top: -45px;
 }
 .cities #av{
-    color: black;
+    color: #f5182f;
     font-weight: 500;
     font-size: x-small;
     margin-top: -20px;
@@ -324,6 +369,7 @@ li a{
     background-color: #912a8e;
     padding: 200px;
     margin-top: 100px;
+    /* background: url('./anime/ani2.PNG'); */
 }
 .foot-2{
     margin-top: -130px;
@@ -345,6 +391,23 @@ li a{
 .foot-info a:hover{
     color: #fff;
 }
+
+.fa {
+    padding: 20px;
+    font-size: 100px;
+    width: 50px;
+    text-align: center;
+    text-decoration: none;
+    margin: 5px 2px;
+  }
+  .fa-facebook {
+
+    color: #3B5998;
+  }
+  .fa-twitter {
+   
+    color: #55ACEE;
+  }
 /* footer2 */
 .footer2{
     background-color: aliceblue;

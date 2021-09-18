@@ -1,5 +1,6 @@
 import './App.css';
 import './Travel.css';
+import SocialFollow from "./SocialFollow";
 // import Navbar from './components/Navbar';
 
 import{BrowserRouter} from 'react-router-dom';
@@ -13,7 +14,9 @@ import{BrowserRouter} from 'react-router-dom';
 // import check from './components/Pages/check';
 // import { Component } from 'react';
 import Routey from './components/Routey';
-// import Travel from './components/Travel';
+import Featured from './Pages/Featured';
+import Cities from './Pages/Cities';
+// import Travel from './Pages/Travel';
 // import { Component } from 'react';
 // import { Component } from 'react';
  
@@ -24,6 +27,9 @@ function App() {
  {/* <Component></Component> */}
  {/* <Travel></Travel> */}
   <Routey></Routey>
+  <Featured></Featured>
+  <Cities></Cities>
+  <SocialFollow></SocialFollow>
  </BrowserRouter>
   );
 } 

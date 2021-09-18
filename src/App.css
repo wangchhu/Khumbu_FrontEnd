@@ -1,0 +1,34 @@
+.social-container {
+  padding: 20px 0px;
+  margin-left: 40%;
+  position: absolute;
+  }
+  .social-container h3{
+    align-content: center;
+  }
+  .social-container a{
+    margin-left: 10%;
+  }
+  a.social {
+    margin: 0 1rem;
+    transition: transform 250ms;
+    display: inline-block;
+  }
+  a.social:hover {
+    transform: translateY(-7px);
+  }
+  a.youtube {
+    color: #eb3223;
+  }
+  
+  a.facebook {
+    color: #4968ad;
+  }
+  
+  a.twitter {
+    color: #989ca0;
+  }
+  
+  a.instagram {
+    color: black;
+  }
