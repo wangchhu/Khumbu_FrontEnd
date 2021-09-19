@@ -222,6 +222,30 @@ li a{
     margin-top: -40px;
 }
 
+.prev{
+    margin-left: 10.5%;
+    position: absolute;
+    margin-top: 3.5%;
+    color: #fd2439;
+    text-decoration: none;
+    font-size: x-large;
+}
+.next{
+    margin-left: 88.5%;
+    position: absolute;
+    margin-top: 3.5%;
+    color: #fd2439;
+    text-decoration: none;
+    font-size: x-large;
+}
+  
+  /* On hover, add a black background color with a little bit see-through */
+  .next:hover {
+    color: #592488;
+  }
+  .prev:hover {
+    color: #592488;
+  }
 /*///////////////////////////// Featured room /////////////////*/
 .a4{
     margin-top: 100px;
@@ -320,6 +344,7 @@ li a{
     border-radius: 8%;
     box-shadow: 0 6px 20px rgb(56 125 255 / 20%);
     filter: drop-shadow(0 6px 20px rgba(33, 108, 248, 0.171));
+    object-fit: cover;
 }
 #cities-1 img:hover{
     transform: scale(1.1);

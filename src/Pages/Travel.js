@@ -29,8 +29,9 @@ class Travel extends Component{
        
    }
 
+
     render(){
-        const {isLoaded}=this.state;
+        const {isLoaded}=this.state;          
         return(
         <div>
             {/* Nav bar */}
@@ -101,9 +102,10 @@ class Travel extends Component{
                     
                     <div class="a3">
                         <p>Trending<p id="a3-1">Now</p></p>
-                        
                     </div>
-                   
+                    <a href=" " class="prev" onclick="plusSlides(-1)">&#10094;</a>
+                    <a href=" " class="next" onclick="plusSlides(1)">&#10095;</a>   
+
                     {!isLoaded ? <div class="load">Loading...</div> :
                      <div style={{'display':'flex','justifyContent':'center'}}>
                     
@@ -113,7 +115,7 @@ class Travel extends Component{
                 <div class="flexy" style={{'width':'25%'}}>
                            <div class="hotels" id="Trending">
         
-                        <div class="rooms">
+                        <div class="rooms" onclick="currentSlide(1) ">
                             <div id="r1">
                             <a href="/Book"><img src={"http://localhost:3001/" + MyTrending.path} alt="" height="200px" width="400px"/></a>
                             </div>
@@ -123,13 +125,21 @@ class Travel extends Component{
                             </div>
                         </div>
                     </div>
+                   
                 </div>
                         )
                     })
             
                 }   </div>
-                     }           
+                
+                     }      
+                   
+               
+         
+         
+                     
         </div>
+        
 
         )
     }

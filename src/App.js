@@ -1,6 +1,7 @@
 import './App.css';
 import './Travel.css';
 import SocialFollow from "./SocialFollow";
+
 // import Navbar from './components/Navbar';
 
 import{BrowserRouter} from 'react-router-dom';
