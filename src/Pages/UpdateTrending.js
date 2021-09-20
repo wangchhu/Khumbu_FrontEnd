@@ -14,10 +14,9 @@ class UpdateTrending extends Component{
       
         .then((response)=>{
             this.setState({
-                pname:response.data.pname,
-                type:response.data.type,
-                type2:response.data.type2,
-                price:response.data.price
+                Hotel_name:response.data.Hotel_name,
+                Location:response.data.Location,
+                Price:response.data.Price
             })
         })
         .catch((err)=>{

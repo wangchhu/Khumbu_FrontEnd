@@ -16,9 +16,11 @@ import config from '../chatbot/config';
 import MessageParser from '../chatbot/MessageParser';
 import ActionProvider from '../chatbot/ActionProvider';
 import UpdateTrending from "../Pages/UpdateTrending";
+import UpdateFeatured from "../Pages/UpdateFeatured";
+import UpdateCities from "../Pages/UpdateCities";
 import AdminTrending from "../Pages/AdminTrending";
 import AdminFeatured from "../Pages/AdminFeatured";
-
+import AdminCities from "../Pages/AdminCities";
 
 class Routey extends Component{
     render(){
@@ -34,8 +36,11 @@ class Routey extends Component{
                 <Route path='/AddCities' component={AddCities}/>
                 <Route path='/Esewa' component={Esewa}/>
                 <Route path ="/UpdateTrending" component={UpdateTrending}/>
+                <Route path ="/UpdateFeatured" component={UpdateFeatured}/>
+                <Route path ="/UpdateCities" component={UpdateCities}/>
                 <Route path ="/AdminTrending" component={AdminTrending}/>
                 <Route path ="/AdminFeatured" component={AdminFeatured}/>
+                <Route path ="/AdminCities" component={AdminCities}/>
                 <Route exact path="/">
                 <div class="chatbox" style={{maxWidth:"300px"}}>
                 <Chatbot 
