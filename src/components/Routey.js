@@ -17,6 +17,7 @@ import MessageParser from '../chatbot/MessageParser';
 import ActionProvider from '../chatbot/ActionProvider';
 import UpdateTrending from "../Pages/UpdateTrending";
 import AdminTrending from "../Pages/AdminTrending";
+import AdminFeatured from "../Pages/AdminFeatured";
 
 
 class Routey extends Component{
@@ -34,6 +35,7 @@ class Routey extends Component{
                 <Route path='/Esewa' component={Esewa}/>
                 <Route path ="/UpdateTrending" component={UpdateTrending}/>
                 <Route path ="/AdminTrending" component={AdminTrending}/>
+                <Route path ="/AdminFeatured" component={AdminFeatured}/>
                 <Route exact path="/">
                 <div class="chatbox" style={{maxWidth:"300px"}}>
                 <Chatbot 

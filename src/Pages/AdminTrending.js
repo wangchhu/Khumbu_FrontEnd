@@ -23,7 +23,7 @@ class AdminTrending extends Component{
        
    }
 
-   deleteProduct=(pid)=>{
+   deleteTrending=(pid)=>{
     axios.delete('http://localhost:3001/Trending/delete/' + pid, this.state.config)
     .then((response)=>{
         console.log(response.data.message);
@@ -67,7 +67,7 @@ class AdminTrending extends Component{
                         MyTrending.Hotel_name
                     }
                 </p> 
-                <p><button onClick={this.deleteProduct.bind(this,MyTrending._id)}>Delete</button>
+                <p><button onClick={this.deleteTrending.bind(this,MyTrending._id)}>Delete</button>
                     <p><Link to={'/UpdateTrending/' + MyTrending._id}>UPDATE</Link></p>
                   </p> 
 
