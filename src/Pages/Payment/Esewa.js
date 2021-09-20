@@ -5,7 +5,7 @@ class Esewa extends Component{
     rende(){
         return(
             <div>
-                
+                <h1>payment</h1>
     <form action="https://uat.esewa.com.np/epay/main" method="POST">
         <input value="100" name="tAmt" type="hidden"/>
         <input value="90" name="amt" type="hidden"/>

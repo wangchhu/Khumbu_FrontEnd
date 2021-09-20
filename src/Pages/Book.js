@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from 'axios';
+import Esewa from "./Payment/Esewa";
 
 class Book extends Component{
 
@@ -50,6 +51,7 @@ class Book extends Component{
         // axios.post("http://localhost:3001/client/insert", data)
         .then((response)=>{
             console.log(response)
+            window.open(Esewa,'/Esewa')
            
         })
         .catch((err)=>{
