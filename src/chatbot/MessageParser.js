@@ -19,7 +19,12 @@ class MessageParser {
       if (lowercase.includes("hotel near boudha")) {
         this.actionProvider.greet2();
       }
-  
+      if (lowercase.includes("who is sangmu")) {
+        this.actionProvider.greet3();
+      }
+      if (lowercase.includes("who is wangchhu")) {
+        this.actionProvider.greet4();
+      }
     }
   }
   

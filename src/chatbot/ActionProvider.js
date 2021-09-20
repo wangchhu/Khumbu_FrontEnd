@@ -19,6 +19,14 @@ class ActionProvider {
         this.addMessageToState(message);
       };
 
+      greet3= () => {
+        const message = this.createChatBotMessage("sangmu is theif");
+        this.addMessageToState(message);
+      };
+      greet4= () => {
+        const message = this.createChatBotMessage("wangchhu is god");
+        this.addMessageToState(message);
+      };
     addMessageToState = (message) => {
       this.setState((prevState) => ({
         ...prevState,

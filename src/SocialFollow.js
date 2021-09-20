@@ -12,7 +12,7 @@ export default function SocialFollow() {
     <div>
     <div class="footer1">
         <div class="foot-2">
-            <a href="#Home">
+            <a href="/">
                 <img src="/travel2.png"  alt="img"/>
             </a>
         </div>

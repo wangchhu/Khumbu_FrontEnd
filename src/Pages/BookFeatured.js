@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import axios from 'axios';
 
-class Book extends Component{
+class BookFeatured extends Component{
 
     state={
         client_Username:"",
@@ -30,7 +30,7 @@ class Book extends Component{
             'Check_out': this.state.Check_out,
             'Rooms':this.state.Rooms,
             'Guest': this.state.Guest
-        };
+        };          
 
 
         console.log(data)
@@ -100,19 +100,19 @@ class Book extends Component{
                         </div>
                         <div>
                         <h1>
-                            Trending Rooms
+                            Featured Rooms
                         </h1>
                         </div>
-                <fieldset>  
-                    <legend>Personal Details</legend>
-              <label for="name" id="name">Username</label>  
-              <input type="text" id="name" name="client_Username" placeholder="username"  value={this.state.client_Username} onChange={this.inputHandler}/>
-              <label for="email">E-mail</label>  
+                <fieldset style={{'marginTop': '10px'}}>  
+                    <legend>Personal Details</legend>  
+              <label for="name" class="name">Username</label>  
+              <input type="text" name="client_Username" placeholder="username"  value={this.state.client_Username} onChange={this.inputHandler}/>
+              <label for="email" class="name">E-mail</label>  
               <input type="text" id="email" name="Email" placeholder="e-mail" value={this.state.Email} onChange={this.inputHandler}/>
-              <label for="phone">Phone</label> 
+              <label for="phone" class="name">Phone</label> 
               <input type="number"  id="phone" name="Phone" placeholder="phone" value={this.state.Phone} onChange={this.inputHandler}/>
-
-             </fieldset>
+                    
+             </fieldset>S
             </div>
              <br/>
              <div class="Booking">
@@ -158,4 +158,4 @@ class Book extends Component{
         )
     }
 }
-export default Book;
+export default BookFeatured;

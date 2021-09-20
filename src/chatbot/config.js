@@ -4,7 +4,7 @@ import { createChatBotMessage } from "react-chatbot-kit";
 const config = {
   botName: "Travel",
   initialMessages: [
-    createChatBotMessage(`Hello, Traveller.you're welcome to explore.`, 
+    createChatBotMessage(`Hello, Traveller. You're welcome to explore.`, 
     )
   ],
  

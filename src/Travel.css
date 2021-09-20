@@ -441,9 +441,14 @@ li a{
 
 /* ///////////////////////////=========Booking========= */
 .personal{
-    padding: 40px;
+    padding: 20px;
     background: cadetblue;  
     margin-top: 30px;  
+}
+.personal h1{
+    -webkit-text-stroke: 1px white;
+    margin-left: 37%;
+    color: transparent;
 }
 .btnbook{
     height: 40px;
@@ -457,8 +462,11 @@ li a{
     text-decoration: none;
     color: #fff;
 }
+.field{
+    margin-top: 10px;
+}
 fieldset{
-    margin: 80px 30px;
+    /* margin: 80px 30px; */
     width: 60%;
     margin-left: 20%;
     padding: 20px;
@@ -470,10 +478,15 @@ legend{
     font-weight: 600;
 }
 .personal label{
-    font-size: medium;
+    /* font-size: medium;
     font-family: 'Open Sans', sans-serif;
     color: aliceblue;
-    margin-left: 30px;
+    margin-left: 30px; */
+    font-size: medium;
+    color: aliceblue;
+    margin-left: 2px;
+    margin-top: 22px;
+    display: flex;
 }
 
 
@@ -494,12 +507,21 @@ legend{
     font-size: small;
     font-weight: 100;
 }
+.name label{
+    font-size: medium;
+    font-family: 'Open Sans', sans-serif;
+    color: aliceblue;
+    margin-left: 30px;
+    margin-top: 12% !important;
+    display: contents;
+}
 .personal input{
-    font-size:medium ;
+    /* font-size:medium ;
     border: #df293a;
     margin-left: 20px;
-    margin-top: 20px;
-    
+    margin-top: 20px; */
+    font-size: medium;
+    border: #df293a;
 }
 
 .Booking{
@@ -612,3 +634,10 @@ legend{
 
   /*-------------- Search Bar-----auto--------------- */
 
+/* ---------------Chatbot------------ */
+ .chatbox{
+    position: fixed;
+    margin-left: 84%;
+    margin-top: -68%;
+    /* margin-bottom: 0%; */
+  }

@@ -33,7 +33,7 @@ componentDidMount(){
                  <div class="hotels-2">
                      <div class="featured-Rooms">
                          <div id="r2">
-                         <a href="/Book"> <img src={"http://localhost:3001/" + MyFeatured.path}  alt="" height="200px" width="400px"/></a>
+                         <a href="/BookFeatured"> <img src={"http://localhost:3001/" + MyFeatured.path}  alt="" height="200px" width="400px"/></a>
                          </div>
                              <div id="r2-1">
                                  <h6>{MyFeatured.Hotel_name}</h6>

@@ -1,4 +1,4 @@
-import Chatbot from 'react-chatbot-kit';
+// import Chatbot from 'react-chatbot-kit';
 import './App.css';
 import './Travel.css';
 import SocialFollow from "./SocialFollow";
@@ -7,12 +7,12 @@ import SocialFollow from "./SocialFollow";
 
 import{BrowserRouter} from 'react-router-dom';
 import Routey from './components/Routey';
-import Featured from './Pages/Featured';
-import Cities from './Pages/Cities';
+// import Featured from './Pages/Featured';
+// import Cities from './Pages/Cities';
 
-import config from './chatbot/config';
-import MessageParser from './chatbot/MessageParser';
-import ActionProvider from './chatbot/ActionProvider';
+// import config from './chatbot/config';
+// import MessageParser from './chatbot/MessageParser';
+// import ActionProvider from './chatbot/ActionProvider';
 
 
 
@@ -22,13 +22,7 @@ function App() {
  {/* <Component></Component> */}
  {/* <Travel></Travel> */}
   <Routey></Routey>
-  <Featured></Featured>
-  <Cities></Cities>
-  <div class="chatbox" style={{maxWidth:"300px"}}>
-  <Chatbot config={config} 
-  actionProvider={ActionProvider} 
-  messageParser={MessageParser}></Chatbot>
-  </div>
+  
   <SocialFollow></SocialFollow>
  
  
